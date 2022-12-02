@@ -6,8 +6,8 @@
  * Step 1   - Handle edge case or Split the string
  * Step 2   - Declare a local variable
  * Step 3   - Iterate a loop to reverse string
- * Step 4   - Join the character form the last i.e., result = current + result
- * Step 5   - Return result
+ * Step 4   - Join the character form the last i.e., revStr = current + revStr
+ * Step 5   - Return revStr
  */
 const reverseString = (str) => {
   if (!str && typeof str !== "string") {
@@ -15,12 +15,12 @@ const reverseString = (str) => {
   }
 
   const splittedStr = str.split("");
-  let result = "";
+  let revStr = "";
 
   for (let i = 0; i < splittedStr.length; i++) {
-    result = splittedStr[i] + result;
+    revStr = splittedStr[i] + revStr;
   }
-  return result;
+  return revStr;
 };
 
 console.log(reverseString("ankit"));
